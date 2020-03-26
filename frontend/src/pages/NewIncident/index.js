@@ -19,7 +19,7 @@ export default function NewIncident() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await api.post('incidentsftp', {
+      await api.post('incidents', {
         title,
         description,
         value
