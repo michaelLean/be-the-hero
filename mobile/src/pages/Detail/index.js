@@ -46,16 +46,16 @@ export default function Detail() {
         </TouchableOpacity>
       </View>
       <View style={styles.incident}>
-        <Text style={[style.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
-        <Text style={style.incidentValue}>
+        <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
+        <Text style={styles.incidentValue}>
           {incident.name} de {incident.city}/{incident.uf}
         </Text>
 
-        <Text style={style.incidentProperty}>CASO:</Text>
-        <Text style={style.incidentValue}>{incident.title}</Text>
+        <Text style={styles.incidentProperty}>CASO:</Text>
+        <Text style={styles.incidentValue}>{incident.title}</Text>
 
-        <Text style={style.incidentProperty}>VALOR:</Text>
-        <Text style={style.incidentValue}>
+        <Text style={styles.incidentProperty}>VALOR:</Text>
+        <Text style={styles.incidentValue}>
           {Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
@@ -63,14 +63,14 @@ export default function Detail() {
         </Text>
       </View>
       <View style={styles.contactBox}>
-        <Text style={style.heroTitle}>Salve o dia!</Text>
-        <Text style={style.heroTitle}>Seja o herói desse caso.</Text>
-        <Text style={style.heroDescription}>Entre em contato:</Text>
-        <View style={style.actions}>
-          <TouchableOpacity style={style.action} onPress={sendWhatsapp}>
+        <Text style={styles.heroTitle}>Salve o dia!</Text>
+        <Text style={styles.heroTitle}>Seja o herói desse caso.</Text>
+        <Text style={styles.heroDescription}>Entre em contato:</Text>
+        <View style={styles.actions}>
+          <TouchableOpacity style={styles.action} onPress={sendWhatsapp}>
             <Text style={styles.actionText}>WhatsApp</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={style.action} onPress={sendEmail}>
+          <TouchableOpacity style={styles.action} onPress={sendEmail}>
             <Text style={styles.actionText}>Email</Text>
           </TouchableOpacity>
         </View>
